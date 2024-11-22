@@ -1,0 +1,66 @@
+/* Container for the banner slider */
+.ad-banner-slider {
+  width: 100%;
+  max-width: 1200px;
+  height: 100px; /* Adjust height as needed */
+  margin: 20px auto;
+  position: relative;
+  overflow: hidden;
+  background: #000; /* Black background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px; /* Optional rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Individual slides */
+.ad-banner-slider .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 1s ease-in-out;
+  text-align: center;
+}
+
+/* Active slide styling */
+.ad-banner-slider .slide.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Logo styling for the first slide */
+.ad-banner-slider .logo {
+  max-width: 70%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Text styling for slides */
+.ad-banner-slider h1 {
+  font-family: Arial, sans-serif;
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Animated "FREE" text */
+.animated-text {
+  font-size: 4rem;
+  color: #ff6a00;
+  animation: bounce 1s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
